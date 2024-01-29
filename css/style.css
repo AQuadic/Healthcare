@@ -406,6 +406,7 @@ letter-spacing: 0.5px;
   min-width: 300px;
   position: relative;
 }
+
 .head .content .part2 img {
   height: auto;
   width: 100%;
@@ -1351,6 +1352,11 @@ letter-spacing: 0.5px;
     gap: 6px;
     margin-bottom: 20px;
   }
+  .pricing .content .decPrice {
+   
+    width:100%;
+    
+}
 }
 @media (max-width: 500px) {
   .pricing .content .reviews .part h4 {
@@ -1378,6 +1384,11 @@ footer .content .parts .partlogo {
   width: 174px;
   max-width: 100%;
   flex: 1;
+}
+footer .content .parts .partlogo img{
+  max-width: 100%;
+  height: 80px;
+  object-fit: contain;
 }
 footer .content .parts .part {
   width: 174px;
@@ -1575,7 +1586,7 @@ footer .content .copy .part2 ul li .copyLink {
   background-color: transparent;
   border: none;
   padding: 0;
-  padding-bottom: 24px;
+  padding-bottom: 0px;
   padding-left: 48px;
   border-left: 3px solid #2563eb;
   border-radius: 0;
@@ -1585,6 +1596,8 @@ footer .content .copy .part2 ul li .copyLink {
   border-left: 3px solid #cbd5e1;
 }
 .matters .content .parts .part2 .collapse {
+  height: auto;
+  transition: 0.5s;
 }
 .matters .content .parts .part2 h3 {
   color: #0f172a;
@@ -1627,7 +1640,7 @@ footer .content .copy .part2 ul li .copyLink {
   background: rgb(71 59 240 / 8%);
   border: 2px solid rgb(71 59 240 / 8%);
 }
-.matters #2563ebbutton[aria-expanded="false"] {
+.matters button[aria-expanded="false"] {
   padding-bottom: 0px !important ;
   border-left: 3px solid #cbd5e1 !important;
 }
@@ -1690,6 +1703,7 @@ footer .content .copy .part2 ul li .copyLink {
   flex-direction: column;
   gap: 24px;
   max-width: 600px;
+  flex: 1;
 }
 .improve .content .part1 h2 {
   color: #0f172a;
@@ -1758,12 +1772,40 @@ footer .content .copy .part2 ul li .copyLink {
 .improve .content .part2 {
   max-width: 600px;
   border-radius: 20px;
+  width: 100%;
+  flex: 1;
 }
-
+.improve .content .part2 img{
+  max-width: 100%;
+  height: auto;
+}
 .video-container {
-  display: none;
+
+  max-width: 100%;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.video-container.active {
+  transform: scale(1);
+}
+.video-container a {
+  width: 100%;
+  height: 100%;
+}
+.video-container a img{
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 992px) {
+  .improve .content {
+  flex-direction: column;
+  }
+  .improve .content .part2 {
+    max-width: 600px;
+  
+    width: 100%;
+    margin: auto;
+}
   .improve {
     margin-bottom: 80px;
   }

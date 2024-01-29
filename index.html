@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
     integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/all.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -50,11 +50,11 @@
           </li>
         </ul>
         <div class="end_nav">
-         
-      
-           <a href="#" class="logBtn">Log In</a>
-           <a href="#" class="subscribe">Subscribe</a>
-        
+
+
+          <a href="#" class="logBtn">Log In</a>
+          <a href="#" class="subscribe">Subscribe</a>
+
         </div>
 
       </div>
@@ -189,7 +189,7 @@
             <button onclick="showVideo(1)" id="btn1" class="active">Research</button>
             <button onclick="showVideo(2)" id="btn2">Plan</button>
             <button onclick="showVideo(3)" id="btn3">Design</button>
-          
+
           </div>
           <p>Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque donec et tellus ac
             varius tortor, bibendum. Nulla felis ac turpis at amet. Purus malesuada placerat arcu at enim elit in
@@ -203,29 +203,21 @@
             </svg>
           </a>
         </div>
-        <div class="part2">
-          <div class="video-container" id="video1">
-            
-            <video controls width="400">
-              <source src="video1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+        <div class="part2" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
+          <div class="video-container"  id="video1">
+            <a href="">
+              <img src="./images/screen.webp" alt="screen">
+            </a>
           </div>
-        
-          <div class="video-container" id="video2">
-            
-            <video controls width="400">
-              <source src="video2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          <div class="video-container"  id="video2">
+            <a href="">
+              <img src="./images/picturevideo2.webp" alt="screen">
+            </a>
           </div>
-        
-          <div class="video-container" id="video3">
-            
-            <video controls width="400">
-              <source src="video3.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          <div class="video-container"  id="video3">
+            <a href="">
+              <img src="./images/screen.webp" alt="screen">
+            </a>
           </div>
         </div>
       </div>
@@ -634,7 +626,7 @@
         <div class="parts">
           <div class="partlogo">
             <a href="" class="logo">
-              <img src="./images/footerLogo.webp" alt="footer logo">
+              <img src='./images/logo.png' alt="footer logo">
             </a>
           </div>
           <div class="part">
@@ -823,30 +815,46 @@
       ],
     });
   </script>
- <script>
-  // Show the first video and add "active" class to the first button by default
-  window.onload = function() {
-    showVideo(1);
-  };
+  <script>
+    // Show the first video and add "active" class to the first button by default
+    window.onload = function () {
+      showVideo(1);
+    };
 
-  function showVideo(videoNumber) {
-    // Hide all videos
-    document.querySelectorAll('.video-container').forEach(video => {
-      video.style.display = 'none';
-    });
+    function showVideo(videoNumber) {
+      // Hide all videos
+      document.querySelectorAll('.video-container').forEach(video => {
+        video.style.display = 'none';
+        video.style.opacity = '0';
+        video.classList.remove('active')
+      });
 
-    // Remove "active" class from all buttons
-    document.querySelectorAll('button').forEach(btn => {
-      btn.classList.remove('active');
-    });
+      // Remove "active" class from all buttons
+      document.querySelectorAll('button').forEach(btn => {
+        btn.classList.remove('active');
+      });
 
-    // Show the selected video
-    document.getElementById('video' + videoNumber).style.display = 'block';
+      // Show the selected video
+      document.getElementById('video' + videoNumber).style.display = 'block';
+      document.getElementById('video' + videoNumber).style.opacity = '1';
+      document.getElementById('video' + videoNumber).classList.add('active');
 
-    // Add "active" class to the clicked button
-    document.getElementById('btn' + videoNumber).classList.add('active');
-  }
-</script>
+      // Add "active" class to the clicked button
+      document.getElementById('btn' + videoNumber).classList.add('active');
+    }
+    /*==================Acc==========================*/
+    function showDec(videoNumber) {
+      // Hide all videos
+      document.querySelectorAll('.video-container').forEach(video => {
+        video.style.display = 'none';
+        video.classList.remove('active')
+      });
+
+      // Show the selected video
+      document.getElementById('collapseExample' + videoNumber).style.display = 'block';
+     
+    }
+  </script>
 </body>
 
 </html>

@@ -328,13 +328,13 @@
           <div class="part1">
             <img src="./images/mattersImg.webp" alt="matters img">
           </div>
-          <div class="part2">
+          <div class="part2 " id="accordionFlushExample">
             <div class="partDec">
               <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1"
-                aria-expanded="false" aria-controls="collapseExample1">
+                aria-expanded="true" aria-controls="collapseExample1">
                 Bibendum gravida dolor egestas aliquam
               </button>
-              <div class="collapse" id="collapseExample1">
+              <div class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample" id="collapseExample1">
 
                 <h3> Some placeholder content for the collapse component. This panel is hidden by default but revealed
                   when
@@ -347,7 +347,7 @@
                 aria-expanded="false" aria-controls="collapseExample2">
                 Egestas lorem eget
               </button>
-              <div class="collapse" id="collapseExample2">
+              <div class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="collapseExample2">
 
                 <h3> Some placeholder content for the collapse component. This panel is hidden by default but revealed
                   when
@@ -360,7 +360,7 @@
                 aria-expanded="false" aria-controls="collapseExample3">
                 Tellus eget feugiat sit
               </button>
-              <div class="collapse" id="collapseExample3">
+              <div class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" id="collapseExample3">
 
                 <h3> Some placeholder content for the collapse component. This panel is hidden by default but revealed
                   when
@@ -374,6 +374,7 @@
       </div>
     </div>
   </section>
+  
   <section class="workflow">
     <div class="container">
       <div class="content">
